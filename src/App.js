@@ -17,7 +17,6 @@ function App() {
             <Header setShown={setShown} Shown={Shown} />
             {Shown === 'About Me' ? <AboutMe /> : ''}
             {Shown === 'Projects' ? <Projects /> : ''}
-            {/* Resume */}
         </div>
     );
 }
