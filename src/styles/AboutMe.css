@@ -23,17 +23,20 @@ h5 {
     color: #00B2FF;
     font-family: Inter;
     font-weight: 300;
+    font-size: 16px;
 }
 
 h1 {
     font-weight: 300;
     color: white;
     font-family: Inter;
+    font-size: 38px;
 }
 
 p {
     color: white;
     padding-bottom: 1rem;
+    font-size: 20px;
 }
 
 .In__Touch {
