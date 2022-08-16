@@ -1,0 +1,21 @@
+.back__button {
+    position: relative;
+    background-color: transparent;
+    display: flex;
+    padding: 20px;
+    float: left;
+    width: 3%;
+    align-items: center;
+    justify-content: center;
+}
+
+.back__icon {
+    width: 100%;
+    font-size: 20px;
+}
+
+
+
+.mui__button {
+    width: 50%;
+}

@@ -1,0 +1,175 @@
+.Projects {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+h1 {
+    font-weight: 300;
+    color: white;
+    font-family: Inter;
+}
+
+.thumbnail_holder {
+    display: inline-flex;
+    flex-wrap: wrap;
+    height: 100%;
+    gap: 1rem;
+    align-items: center;
+    justify-content: center;
+}
+
+.gif__holder {
+    display: flex;
+
+}
+
+.Thumbnail {
+    cursor: pointer;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    box-shadow: 10px 15px 10px -9px rgba(0, 0, 0, 0.55);
+    background-color: rgba(52, 52, 52, 0.605);
+}
+
+.Thumbnail>img {
+    width: 300px;
+    height: 220px;
+
+}
+
+.App {
+    gap: 2rem;
+}
+
+
+span {
+    color: #ffffff;
+    font-family: Inter;
+    font-weight: 300;
+}
+
+.individual__projects {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.projects__holder {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    width: 95%;
+    background-color: rgba(170, 169, 169, 0.1);
+    box-shadow: 10px 15px 10px -9px rgba(0, 0, 0, 0.75);
+    overflow: hidden;
+    justify-content: center;
+    gap: 2rem;
+}
+
+.gif__holder {
+    display: flex;
+}
+
+.gif__holder {
+
+    width: 95%;
+    min-width: 300px;
+    gap: 5px;
+    max-width: 1300px;
+}
+
+.gif__div {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+}
+
+.project__header {
+    position: relative;
+    display: flex;
+    width: 100%;
+}
+
+
+.standard__gif {
+    flex: 1;
+    width: 66%;
+}
+
+.mobile__gif {
+    flex: 0.4;
+}
+
+ul {
+    display: flex;
+    flex-direction: column;
+}
+
+li {
+    color: white;
+    list-style-type: disc;
+}
+
+.desc__holder {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    float: left;
+    margin: 0;
+    margin-left: 1%;
+}
+
+.desc__header {
+    margin: 5px;
+    margin-left: 20px;
+}
+
+.link__holder {
+    display: flex;
+    gap: 5px;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding-bottom: 1rem;
+}
+
+.link__anchor {
+    font-size: 13px;
+    font-family: 'Inter';
+    text-decoration: none;
+    width: fit-content;
+
+}
+
+
+a:link {
+    color: #0b80ee;
+    background-color: transparent;
+    text-decoration: none;
+}
+
+a:visited {
+    color: #0b80ee;
+    background-color: transparent;
+    text-decoration: none;
+}
+
+a:hover {
+    color: red;
+    background-color: transparent;
+    text-decoration: underline;
+}
+
+a:active {
+    color: #0b80ee;
+    background-color: transparent;
+    text-decoration: underline;
+}
