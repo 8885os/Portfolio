@@ -74,6 +74,19 @@ span {
 
 }
 
+.link__resume {
+    width: 100px;
+}
+
+.header__button {
+    background-color: transparent;
+    color: white;
+    font-family: 'Inter';
+    text-transform: initial;
+    font-size: large;
+    border: 0px;
+}
+
 .span__git {
     display: flex;
     font-size: 13px;
@@ -84,9 +97,9 @@ span {
     text-transform: initial;
 }
 
-
-
-
+.MuiTab-root {
+    text-transform: initial;
+}
 
 
 .btn.clicked {

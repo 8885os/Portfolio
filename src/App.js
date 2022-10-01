@@ -10,6 +10,7 @@ function App() {
 
     useEffect(() => {
         localStorage.setItem('Tab', Shown)
+        console.log(Shown);
     }, [Shown])
 
     return (
