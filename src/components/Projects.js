@@ -30,12 +30,12 @@ const Projects = () => {
                         <h1>Projects</h1>
                         <div className='thumbnail_holder'>
                             <div className='Thumbnail'>
-                                <img src={MemoryProject} alt='Memories Project' onClick={() => setProject('Memories')}></img>
-                                <span>Memories</span>
+                                <img src={ChatAppProject} alt='Chatapp Project' onClick={() => setProject('Chatapp')}></img>
+                                <span>Chat App</span>
                             </div>
                             <div className='Thumbnail'>
-                                <img src={ToDoProject} alt='ToDo Project' onClick={() => setProject('ToDo')}></img>
-                                <span>To Do / Kanban</span>
+                                <img src={MemoryProject} alt='Memories Project' onClick={() => setProject('Memories')}></img>
+                                <span>Memories</span>
                             </div>
                             <div className='Thumbnail'>
                                 <img src={NetflixCloneProject} alt='NetflixClone Project' onClick={() => setProject('NetflixClone')}></img>
@@ -46,8 +46,8 @@ const Projects = () => {
                                 <span>Facebook Clone</span>
                             </div>
                             <div className='Thumbnail'>
-                                <img src={ChatAppProject} alt='Chatapp Project' onClick={() => setProject('Chatapp')}></img>
-                                <span>Chat App</span>
+                                <img src={ToDoProject} alt='ToDo Project' onClick={() => setProject('ToDo')}></img>
+                                <span>To Do / Kanban</span>
                             </div>
                         </div>
                     </div>
