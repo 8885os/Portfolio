@@ -9,7 +9,8 @@ import ToDoProject from '../images/todo.png'
 import NetflixCloneProject from '../images/netflixclone.png'
 import FacebookCloneProject from '../images/facebookclone.png'
 import FacebookClone from './FacebookClone'
-
+import ChatAppProject from '../images/chatapp.png'
+import ChatApp from './Chatapp'
 
 
 
@@ -44,6 +45,10 @@ const Projects = () => {
                                 <img src={FacebookCloneProject} alt='FacebookClone Project' onClick={() => setProject('FacebookClone')}></img>
                                 <span>Facebook Clone</span>
                             </div>
+                            <div className='Thumbnail'>
+                                <img src={ChatAppProject} alt='Chatapp Project' onClick={() => setProject('Chatapp')}></img>
+                                <span>Chat App</span>
+                            </div>
                         </div>
                     </div>
                     : ''}
@@ -53,6 +58,7 @@ const Projects = () => {
                 {Project === 'ToDo' ? <Todo setProject={setProject} /> : ''}
                 {Project === 'NetflixClone' ? <NetflixClone setProject={setProject} /> : ''}
                 {Project === 'FacebookClone' ? <FacebookClone setProject={setProject} /> : ''}
+                {Project === 'Chatapp' ? <ChatApp setProject={setProject} /> : ''}
             </div>
         </>
     )

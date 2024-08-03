@@ -19,6 +19,7 @@ h1 {
     gap: 1rem;
     align-items: center;
     justify-content: center;
+    width: 80%
 }
 
 .gif__holder {
@@ -106,6 +107,7 @@ span {
 
 .mobile__gif {
     flex: 0.4;
+    margin-left: 20px
 }
 
 ul {
