@@ -29,9 +29,6 @@ const FacebookClone = ({ setProject }) => {
                 </div>
             </div>
             <div className='link__holder'>
-                <span className='link__span'>Deployed at:</span>
-                <a className='link__anchor' href='https://fb-react-d5f3e.firebaseapp.com/' rel="noreferrer" target="_blank">https://fb-react-d5f3e.firebaseapp.com/</a>
-
             </div>
         </div>
     )
