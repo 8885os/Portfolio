@@ -146,7 +146,7 @@ export const projects = [
 		id: nanoid(),
 		title: 'Memory Project',
 		src: MemoryProject,
-		link: 'https://memoryapp-mern.netlify.app/',
+		link: '',
 		github: 'https://github.com/8885os/Memories-App-MERN',
 		stack: {
 			MongoDB: (
