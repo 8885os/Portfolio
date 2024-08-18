@@ -64,7 +64,7 @@ const AboutMe = ({ homeRef }) => {
 			</div>
 
 			<motion.button
-				className='px-6 py-2 rounded-md relative radial-gradient ml-4 h-fit w-fit'
+				className='px-6 py-2 rounded-md relative ml-4 h-fit w-fit'
 				initial={{ '--x': '100%', scale: 0.9 }}
 				animate={{ '--x': '-100%' }}
 				whileHover={{ scale: 1.1 }}

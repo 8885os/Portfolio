@@ -24,21 +24,6 @@ textarea {
 	-moz-box-sizing: border-box; /* Firefox, other Gecko */
 	box-sizing: border-box; /* Opera/IE 8+ */
 }
-.radial-gradient {
-	background: radial-gradient(
-		circle at 100% 0%,
-		rgba(250, 250, 250, 0.14) 20%,
-		transparent 60%
-	);
-}
-
-.radial-gradient-2 {
-	background: radial-gradient(
-		circle at 100% 0%,
-		rgba(250, 250, 250, 0.14) 40%,
-		transparent 100%
-	);
-}
 
 .linear-mask {
 	mask-image: linear-gradient(
@@ -61,7 +46,7 @@ textarea {
 		-75deg,
 		rgba(255, 255, 255, 0.1) calc(var(--x) + 20%),
 		rgba(255, 255, 255, 0.5) calc(var(--x) + 25%),
-		rgba(255, 255, 255, 0.1) calc(var(--x) + 60%)
+		rgba(255, 255, 255, 0.5) calc(var(--x) + 60%)
 	);
 	mask: linear-gradient(black, black) content-box, linear-gradient(black, black);
 	-webkit-mask: linear-gradient(black, black) content-box,

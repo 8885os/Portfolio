@@ -160,7 +160,7 @@ export default function ContactForm({ contactRef }) {
 					/>
 					<div className='flex justify-center gap-8 items-center'>
 						<motion.button
-							className='px-6 py-2 rounded-md relative radial-gradient-2 h-fit w-fit'
+							className='px-6 py-2 rounded-md relative h-fit w-fit bg-neutral-800'
 							initial={{ '--x': '100%', scale: 0.9 }}
 							animate={{ '--x': '-100%' }}
 							whileHover={{ scale: 1 }}
