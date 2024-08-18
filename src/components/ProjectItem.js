@@ -4,7 +4,7 @@ import React from 'react'
 
 export default function ProjectItem({ project }) {
 	return (
-		<div className='cursor-pointer p-2 flex flex-col shadow-lg bg-transparent opacity-95 items-center '>
+		<div className=' p-2 flex flex-col shadow-lg bg-transparent opacity-95 items-center '>
 			<img src={project.src} alt={project.title} className='w-72 h-56'></img>
 			<div className='flex flex-row w-full justify-center'>
 				<span className='flex flex-row gap-12 items-center max-h-6 text-nowrap mt-4'>
@@ -20,16 +20,16 @@ export default function ProjectItem({ project }) {
 				</span>
 			</div>
 			<div className='flex flex-row gap-4 mt-2 items-center'>
-				<div
+				<button
 					className={
 						project.link
-							? 'flex flex-row gap-1 items-center w-full px-3 py-1p rounded-full bg-slate-800'
+							? 'flex flex-row gap-2 items-center w-full  rounded-full bg-slate-800 px-4 py-1p text-neutral-100'
 							: 'hidden'
 					}
 					onClick={() => (project.link ? window.open(project.link) : '')}>
 					<span>Demo</span>
 					<FontAwesomeIcon icon={faUpRightFromSquare}></FontAwesomeIcon>
-				</div>
+				</button>
 				<button
 					className='rounded-full bg-slate-800 px-4 py-1p text-neutral-100'
 					onClick={() => window.open(project.github)}>
