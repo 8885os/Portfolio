@@ -162,7 +162,7 @@ export default function ContactForm({ contactRef }) {
 						<motion.button
 							className='px-6 py-2 rounded-md relative h-fit w-fit bg-neutral-800'
 							initial={{ '--x': '100%', scale: 0.9 }}
-							animate={{ '--x': '-100%' }}
+							animate={{ '--x': '-200%' }}
 							whileHover={{ scale: 1 }}
 							transition={{
 								repeat: Infinity,
