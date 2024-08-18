@@ -1,0 +1,111 @@
+@media (min-width: 1024px) {
+	.embla {
+		max-width: 68rem;
+		margin: auto;
+		--slide-height: 19rem;
+		--slide-spacing: 6rem;
+		--slide-size: 25%;
+		margin-top: 2rem;
+	}
+	.embla__slide {
+		transform: translate3d(0, 0, 0);
+		flex: 0 0 var(--slide-size);
+		min-width: 0;
+		padding-left: var(--slide-spacing);
+		align-items: center;
+		display: flex;
+	}
+	.embla__container {
+		width: 100%;
+		display: flex;
+		touch-action: pan-y pinch-zoom;
+		margin-left: calc(var(--slide-spacing) * -1);
+	}
+	.embla__viewport {
+		overflow: hidden;
+	}
+}
+
+@media (min-width: 768px) and (max-width: 1023px) {
+	.embla {
+		max-width: 48rem;
+		margin: auto;
+		--slide-height: 19rem;
+		--slide-spacing: 6rem;
+		--slide-size: 25%;
+		margin-top: 2rem;
+	}
+	.embla__slide {
+		transform: translate3d(0, 0, 0);
+		flex: 0 0 var(--slide-size);
+		min-width: 0;
+		padding-left: var(--slide-spacing);
+		align-items: center;
+		display: flex;
+	}
+	.embla__container {
+		width: 100%;
+		display: flex;
+		touch-action: pan-y pinch-zoom;
+		margin-left: calc(var(--slide-spacing) * -1);
+	}
+	.embla__viewport {
+		overflow: hidden;
+	}
+}
+@media (min-width: 500px) and (max-width: 767px) {
+	.embla {
+		max-width: 30rem;
+		margin: auto;
+		--slide-height: 19rem;
+		--slide-spacing: 6rem;
+		--slide-size: 25%;
+		margin-top: 2rem;
+	}
+	.embla__slide {
+		transform: translate3d(0, 0, 0);
+		flex: 0 0 var(--slide-size);
+		min-width: 0;
+		padding-left: var(--slide-spacing);
+		align-items: center;
+		display: flex;
+	}
+	.embla__container {
+		width: 100%;
+		display: flex;
+		touch-action: pan-y pinch-zoom;
+		margin-left: calc(var(--slide-spacing) * -1);
+	}
+	.embla__viewport {
+		overflow: hidden;
+		width: 100%;
+	}
+}
+@media (min-width: 300px) and (max-width: 499px) {
+	.embla {
+		max-width: 15rem;
+		margin: auto;
+		--slide-height: 19rem;
+		--slide-spacing: 6rem;
+		--slide-size: 25%;
+		margin-top: 2rem;
+	}
+	.embla__slide {
+		transform: translate3d(0, 0, 0);
+		flex: 0 0 var(--slide-size);
+		min-width: 0;
+		padding-left: var(--slide-spacing);
+		align-items: center;
+		display: flex;
+	}
+	.embla__container {
+		width: 100%;
+		display: flex;
+		touch-action: pan-y pinch-zoom;
+		margin-left: calc(var(--slide-spacing) * -1);
+	}
+	.embla__viewport {
+		overflow: hidden;
+		width: 100%;
+	}
+}

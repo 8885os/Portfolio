@@ -1,62 +1,94 @@
-import React from 'react'
-import '../styles/Header.css'
-import gitlogo from '../images/gitlogo.png'
-import { Tabs, Tab, Button, Box } from '@mui/material'
+import { useCallback, useEffect, useState } from 'react'
+import Button from './Button'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faGithub, faLinkedin } from '@fortawesome/free-brands-svg-icons'
+import { TbFileCv } from 'react-icons/tb'
 import respdf from '../testersu.pdf'
+const githubLink = 'https://github.com/8885os'
+const linkedinLink = 'https://www.linkedin.com/in/daniel-davies-410b04321/'
+const Header = ({ homeRef, projectRef, skillsRef, headerRef, contactRef }) => {
+	const [scrollPosition, setScrollPosition] = useState(
+		localStorage.getItem('scrollPosition') || 0
+	)
+	const [transparency, setTransparency] = useState(
+		localStorage.getItem('transparency') || 1
+	)
 
-const Header = ({ setShown, Shown, generateClassName }) => {
+	useEffect(() => {
+		const storedTransparency = localStorage.getItem('transparency')
+		if (storedTransparency) {
+			setTransparency(storedTransparency)
+		}
+	}, [transparency])
 
+	useEffect(() => {
+		const storedTransparency = localStorage.getItem('transparency')
+		if (storedTransparency) {
+			setTransparency(parseFloat(storedTransparency))
+		}
+	}, [])
+	const handleScroll = useCallback(() => {
+		setScrollPosition(window.scrollY)
+		localStorage.setItem('scrollPosition', window.scrollY)
+		setTransparency(
+			scrollPosition / 600.0 <= 0.95 ? scrollPosition / 600.0 : 0.95
+		)
 
-    const githubLink = 'https://github.com/8885os'
+		localStorage.setItem(
+			'transparency',
+			scrollPosition / 600.0 <= 0.95 ? scrollPosition / 600.0 : 0.95
+		)
+	}, [scrollPosition])
 
-    const handleChange = (event, newValue) => {
+	useEffect(() => {
+		window.addEventListener('scroll', handleScroll)
 
-        if (newValue !== 'Resume') {
-            setShown(newValue);
-        }
-    };
+		return () => {
+			window.removeEventListener('scroll', handleScroll)
+		}
+	}, [handleScroll])
 
-    return (
-        <div className='AppHeader'>
-
-            <div className='button_holder'>
-                <Box sx={{
-                    '& .MuiTab-root': {
-                        color: 'white',
-                        opacity: 1,
-                        fontFamily: 'Inter',
-                        textTransform: 'Initial',
-                        fontSize: { xs: '13px', sm: '17px', md: '18px', lg: '18px' },
-                        marginLeft: { xs: '0px', sm: '20px', md: '40px', lg: '50px', xl: '60px' },
-                        marginRight: { xs: '0px', sm: '20px', md: '40px', lg: '50px', xl: '60px' },
-                    },
-                    '& .Mui-selected': {
-                        color: '#00B2FF',
-                        borderRadius: '20rem',
-                    },
-
-                    '& .css-8je8zh-MuiTouchRipple-root': {
-                        color: 'blue',
-                    },
-                }}>
-                    <Tabs value={Shown} onChange={handleChange} aria-label="app__menu" textColor="inherit" indicatorColor='inherit'>
-                        <Tab value="About Me" label="About Me"></Tab>
-                        <Tab value="Projects" label="Projects"></Tab>
-                        <Tab value="Resume" className='link__resume' label="Resume" href={respdf} rel="noreferrer" target="_blank"></Tab>
-
-                        <Button href={githubLink} target="_blank" startIcon={(
-                            <div className='img__holder'>
-                                <img src={gitlogo} alt='Github'></img>
-                                <span className='span__git'>Github</span>
-                            </div>)
-                        } />
-                    </Tabs>
-                </Box>
-            </div>
-
-
-        </div >
-    )
+	return (
+		<nav
+			style={{ backgroundColor: `rgba(27, 27, 27, ${transparency})` }}
+			className={`${
+				scrollPosition > 60 ? 'sticky backdrop-blur-md' : 'top-0'
+			} sticky top-2 z-50 flex flex-row h-16 w-11/12 md:w-full justify-center items-center mx-auto max-w-7xl px-2 md:px-6 lg:px-8 rounded-full`}
+			ref={headerRef}>
+			<div className='flex flex-row  md:w-full justify-center md:justify-center '>
+				<div className='md:ml-32 md:mr-auto flex flex-row items-center md:gap-12 flex-grow justify-center text-nowrap'>
+					<Button text='Home' sectionRef={homeRef} headerRef={headerRef} />
+					<Button
+						text='Projects'
+						sectionRef={projectRef}
+						headerRef={headerRef}
+					/>
+					<Button text='Skills' sectionRef={skillsRef} headerRef={headerRef} />
+					<Button
+						text='Contact Me'
+						sectionRef={contactRef}
+						headerRef={headerRef}
+					/>
+				</div>
+				<span className='flex justify-end items-center gap-2 ml-auto md:mr-32'>
+					<FontAwesomeIcon
+						icon={faGithub}
+						className='h-5 w-5 md:h-8 md:w-8 text-gray-500 hover:cursor-pointer'
+						onClick={() => window.open(githubLink)}
+					/>
+					<FontAwesomeIcon
+						icon={faLinkedin}
+						className='h-5 w-5 md:h-8 md:w-8 hover:cursor-pointer text-gray-500'
+						onClick={() => window.open(linkedinLink)}
+					/>
+					<TbFileCv
+						className='h-5 w-5 md:h-8 md:w-8 hover:cursor-pointer text-gray-500'
+						onClick={() => window.open(respdf)}
+					/>
+				</span>
+			</div>
+		</nav>
+	)
 }
 
 export default Header
