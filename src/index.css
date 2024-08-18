@@ -44,7 +44,7 @@ textarea {
 .linear-overlay {
 	background-image: linear-gradient(
 		270deg,
-		rgba(255, 255, 255, 0.1) calc(var(--x) + 20%),
+		rgba(255, 255, 255, 0.7) calc(var(--x) + 20%),
 		rgba(255, 255, 255, 0.7) calc(var(--x) + 25%),
 		rgba(255, 255, 255, 0.1) calc(var(--x) + 60%)
 	);
@@ -58,7 +58,7 @@ textarea {
 .linear-overlay-2 {
 	background-image: linear-gradient(
 		270deg,
-		rgba(255, 255, 255, 1) calc(var(--x) + 20%),
+		rgba(255, 255, 255, 0.7) calc(var(--x) + 20%),
 		rgba(255, 255, 255, 0.774) calc(var(--x) + 25%),
 		rgba(255, 255, 255, 0.295) calc(var(--x) + 100%)
 	);
