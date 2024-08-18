@@ -64,10 +64,10 @@ const AboutMe = ({ homeRef }) => {
 			</div>
 
 			<motion.button
-				className='px-6 py-2 rounded-md relative ml-4 h-fit w-fit'
+				className='px-6 py-2 ml-3 rounded-md relative h-fit w-fit bg-neutral-800'
 				initial={{ '--x': '100%', scale: 0.9 }}
 				animate={{ '--x': '-200%' }}
-				whileHover={{ scale: 1.1 }}
+				whileHover={{ scale: 1 }}
 				transition={{
 					repeat: Infinity,
 					repeatType: 'loop',
@@ -78,8 +78,8 @@ const AboutMe = ({ homeRef }) => {
 					mass: 2,
 					scale: {
 						type: 'spring',
-						stiffness: 1,
-						damping: 10,
+						stiffness: 10,
+						damping: 5,
 						mass: 0.1,
 					},
 				}}
