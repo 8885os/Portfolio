@@ -84,7 +84,7 @@ const AboutMe = ({ homeRef }) => {
 					},
 				}}
 				onClick={() => window.open(respdf)}>
-				<span className='text-neutral-100 tracking-wide font-light h-full w-full block relative linear-mask active:no-underline active:text-neutral-100 text-button'>
+				<span className='text-neutral-100 tracking-wide font-light h-full w-full block relative active:no-underline active:text-neutral-100 text-button'>
 					Open Cv
 				</span>
 				<span className='block absolute inset-0 rounded-md p-px linear-overlay' />

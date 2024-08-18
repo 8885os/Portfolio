@@ -179,7 +179,7 @@ export default function ContactForm({ contactRef }) {
 									mass: 0.1,
 								},
 							}}>
-							<span className='text-neutral-100 tracking-wide font-light h-full w-full block relative linear-mask active:no-underline active:text-neutral-100 text-button'>
+							<span className='text-neutral-100 tracking-wide font-light h-full w-full block relative active:no-underline active:text-neutral-100 text-button'>
 								Submit
 							</span>
 							<span className='block absolute inset-0 rounded-md p-px linear-overlay-2' />
