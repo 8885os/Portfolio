@@ -124,7 +124,7 @@ export const projects = [
 		title: 'Horizon Banking',
 		src: Horizon,
 		link: 'https://horizon-banking-two.vercel.app/sign-in',
-		github: 'https://github.com/8885os/Memories-App-MERN',
+		github: 'https://github.com/8885os/Horizon-Banking',
 		stack: {
 			Typescript: (
 				<SiTypescript className='h-4 w-4 sm:h-4 sm:w-4 md:h-4 md:w-4 text-blue-500'></SiTypescript>
