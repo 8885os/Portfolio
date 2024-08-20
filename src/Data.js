@@ -9,7 +9,7 @@ import {
 	SiNodedotjs,
 	SiHeroku,
 	SiFirebase,
-	SiGithub,
+	SiSentry,
 } from 'react-icons/si'
 import { TbBrandNextjs } from 'react-icons/tb'
 import { faGithub, faHtml5 } from '@fortawesome/free-brands-svg-icons'
@@ -17,10 +17,10 @@ import { faJs } from '@fortawesome/free-brands-svg-icons'
 import { faReact } from '@fortawesome/free-brands-svg-icons'
 import { faCss3 } from '@fortawesome/free-brands-svg-icons'
 import MemoryProject from './images/memories.png'
-import ToDoProject from './images/todo.png'
 import NetflixCloneProject from './images/netflixclone.png'
 import FacebookCloneProject from './images/facebookclone.png'
 import ChatAppProject from './images/chatapp.png'
+import Horizon from './images/horizon.png'
 
 export const sections = [
 	{
@@ -121,6 +121,32 @@ export const skills = [
 export const projects = [
 	{
 		id: nanoid(),
+		title: 'Horizon Banking',
+		src: Horizon,
+		link: 'https://horizon-banking-two.vercel.app/sign-in',
+		github: 'https://github.com/8885os/Memories-App-MERN',
+		stack: {
+			Typescript: (
+				<SiTypescript className='h-4 w-4 sm:h-4 sm:w-4 md:h-4 md:w-4 text-blue-500'></SiTypescript>
+			),
+			'Next.js': (
+				<TbBrandNextjs className='h-4 w-4 sm:h-4 sm:w-4 md:h-4 md:w-4 text-neutral-300'></TbBrandNextjs>
+			),
+			React: (
+				<FontAwesomeIcon
+					icon={faReact}
+					className='h-4 w-4 sm:h-4 sm:w-4 md:h-4 md:w-4 text-sky-400'></FontAwesomeIcon>
+			),
+			Tailwind: (
+				<SiTailwindcss className='h-4 w-4 sm:h-4 sm:w-4 md:h-4 md:w-4 text-sky-500'></SiTailwindcss>
+			),
+			Sentry: (
+				<SiSentry className='h-4 w-4 sm:h-4 sm:w-4 md:h-4 md:w-4 text-neutral-300'></SiSentry>
+			),
+		},
+	},
+	{
+		id: nanoid(),
 		title: 'Chat App',
 		src: ChatAppProject,
 		link: '',
@@ -182,23 +208,6 @@ export const projects = [
 			),
 			Firebase: (
 				<SiFirebase className='h-4 w-4 sm:h-4 sm:w-4 md:h-4 md:w-4 text-yellow-500'></SiFirebase>
-			),
-		},
-	},
-	{
-		id: nanoid(),
-		title: 'To Do / Kanban',
-		src: ToDoProject,
-		link: '',
-		github: 'https://github.com/8885os/Todo',
-		stack: {
-			React: (
-				<FontAwesomeIcon
-					icon={faReact}
-					className='h-4 w-4 sm:h-4 sm:w-4 md:h-4 md:w-4 text-sky-400'></FontAwesomeIcon>
-			),
-			GithubPages: (
-				<SiGithub className='h-4 w-4 sm:h-4 sm:w-4 md:h-4 md:w-4 p-1p text-neutral-300'></SiGithub>
 			),
 		},
 	},

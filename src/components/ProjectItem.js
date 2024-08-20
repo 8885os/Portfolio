@@ -4,8 +4,8 @@ import React from 'react'
 
 export default function ProjectItem({ project }) {
 	return (
-		<div className=' p-2 flex flex-col shadow-lg bg-transparent opacity-95 items-center '>
-			<img src={project.src} alt={project.title} className='w-72 h-56'></img>
+		<div className=' p-2 flex flex-col shadow-lg bg-transparent opacity-95 items-center w-96 h-50'>
+			<img src={project.src} alt={project.title} className='w-96 h-72 '></img>
 			<div className='flex flex-row w-full justify-center'>
 				<span className='flex flex-row gap-12 items-center max-h-6 text-nowrap mt-4'>
 					{project.title}
