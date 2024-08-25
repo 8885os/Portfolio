@@ -78,11 +78,25 @@ const EmblaCarousel = (props) => {
 		<div className='embla'>
 			<div className='embla__viewport' ref={emblaRef} onMouseUp={handleMouseUp}>
 				<div className='embla__container'>
-					{slides.map((skill, index) => (
-						<div className='embla__slide' key={index}>
-							<SkillCard key={skill.id} icon={skill.logo} />
-						</div>
-					))}
+					{slides.map((skill, index) => {
+						if (skill.title !== 'Python') {
+							return (
+								<div className='embla__slide' key={index}>
+									<SkillCard key={skill.id} icon={skill.logo} />
+								</div>
+							)
+						} else {
+							return (
+								<div className='embla__slide' key={index}>
+									<SkillCard
+										key={skill.id}
+										icon={skill.logo}
+										title={skill.title}
+									/>
+								</div>
+							)
+						}
+					})}
 				</div>
 			</div>
 		</div>

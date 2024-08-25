@@ -3,11 +3,16 @@ import '../styles/AboutMe.css'
 import { motion } from 'framer-motion'
 import respdf from '../testersu.pdf'
 import { TypeAnimation } from 'react-type-animation'
+import python from '../images/python.png'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faJs } from '@fortawesome/free-brands-svg-icons'
+import { SiTypescript } from 'react-icons/si'
 const AboutMe = ({ homeRef }) => {
 	const text =
-		`I’m a software engineer specializing in building (and occasionally designing) exceptional Websites and User Interfaces.`.split(
+		`I’m a software engineer who builds exceptional Websites and User Interfaces. I have also built automation tools and bots for clients using Python.`.split(
 			' '
 		)
+	const text2 = `The languages i specialise in are: `.split(' ')
 	const name = 'Daniel Davies'.split(' ')
 	return (
 		<div
@@ -21,9 +26,7 @@ const AboutMe = ({ homeRef }) => {
 						2000, // wait 1s before replacing "Mice" with "Hamsters"
 						`ReactJS Developer`,
 						2000,
-						`Web Developer`,
-						2000,
-						`NextJS Developer`,
+						`Python Developer`,
 						2000,
 					]}
 					wrapper='span'
@@ -61,6 +64,33 @@ const AboutMe = ({ homeRef }) => {
 						{t}{' '}
 					</motion.span>
 				))}
+				<div className='mt-10'>
+					{text2.map((t, i) => (
+						<motion.span
+							className='text-white font-light text-base md:text-3xl inline'
+							initial={{ opacity: 0 }}
+							animate={{ opacity: 1 }}
+							transition={{
+								duration: 0.5,
+								delay: i / 15,
+							}}
+							key={i}>
+							{t}{' '}
+						</motion.span>
+					))}
+					<div className='flex items-center gap-5 justify-center w-full h-full mt-6'>
+						<img
+							src={python}
+							alt='python'
+							className='h-16 w-16 sm:h-26 sm:w-26 md:h-28 md:w-28'
+						/>
+						<FontAwesomeIcon
+							icon={faJs}
+							className='h-16 w-16 sm:h-26 sm:w-26 md:h-28 md:w-28 text-yellow-300'
+						/>
+						<SiTypescript className='h-16 w-16 sm:h-26 sm:w-26 md:h-24 md:w-24 text-blue-500' />
+					</div>
+				</div>
 			</div>
 
 			<motion.button

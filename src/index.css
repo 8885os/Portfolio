@@ -56,3 +56,9 @@ code {
 	font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
 		monospace;
 }
+/* Hide the SVG on small screens */
+@media only screen and (max-width: 768px) {
+	.python-icon {
+		display: none;
+	}
+}

@@ -21,7 +21,7 @@ import NetflixCloneProject from './images/netflixclone.png'
 import FacebookCloneProject from './images/facebookclone.png'
 import ChatAppProject from './images/chatapp.png'
 import Horizon from './images/horizon.png'
-
+import python from './images/python.png'
 export const sections = [
 	{
 		id: nanoid(),
@@ -115,6 +115,11 @@ export const skills = [
 		logo: (
 			<SiTailwindcss className='h-16 w-16 sm:h-26 sm:w-26 md:h-36 md:w-36 text-sky-500' />
 		),
+	},
+	{
+		id: nanoid(),
+		title: 'Python',
+		logo: python,
 	},
 ]
 
