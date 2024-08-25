@@ -24,9 +24,9 @@ const AboutMe = ({ homeRef }) => {
 						// Same substring at the start will only be typed out once, initially
 						`Software Developer`,
 						2000, // wait 1s before replacing "Mice" with "Hamsters"
-						`ReactJS Developer`,
-						2000,
 						`Python Developer`,
+						2000,
+						`ReactJS Developer`,
 						2000,
 					]}
 					wrapper='span'
