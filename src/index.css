@@ -8,13 +8,20 @@ body {
 	font-family: -apple-system, BlinkMacSystemFont, 'Raleway';
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
-	background: rgb(17, 17, 17);
+	background: rgb(0, 0, 0);
+	background-color: gradient(
+		linear,
+		0% 0%,
+		0% 100%,
+		from(rgba(0, 0, 0, 0.5)),
+		to(rgba(202, 77, 77, 0.5))
+	);
 	background-image: radial-gradient(
-		rgba(150, 148, 148, 0.3) 1px,
+		rgba(151, 151, 151, 0.192) 1px,
 		transparent 1%
 	);
-	background-size: 22px 22px;
-	background-position: -10px -10px;
+	background-size: 16px 16px;
+	background-position: 0px 0px;
 	color: white;
 	user-select: none;
 }
@@ -60,5 +67,27 @@ code {
 @media only screen and (max-width: 768px) {
 	.python-icon {
 		display: none;
+	}
+}
+
+a,
+a:hover,
+a:focus,
+a:active {
+	text-decoration: none;
+	color: inherit;
+}
+
+.parent {
+	display: grid;
+	grid-template-columns: 1fr 2fr 1fr;
+	grid-template-rows: 1fr;
+	grid-column-gap: 2rem;
+	margin-top: 2rem;
+}
+
+@layer base {
+  :root {
+		--radius: 0.5rem;
 	}
 }

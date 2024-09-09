@@ -1,26 +1,7 @@
-.Projects {
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	flex-direction: column;
-	gap: 1rem;
-	margin-top: 2.5rem;
-}
-
 h1 {
 	font-weight: 300;
 	color: white;
 	font-family: Inter;
-}
-
-.thumbnail_holder {
-	display: inline-flex;
-	flex-wrap: wrap;
-	height: 100%;
-	gap: 1rem;
-	align-items: center;
-	justify-content: center;
-	width: 80%;
 }
 
 .gif__holder {
