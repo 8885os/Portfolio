@@ -66,10 +66,15 @@ code {
 /* Hide the SVG on small screens */
 @media only screen and (max-width: 768px) {
 	.python-icon {
-		display: none;
+		width: 60px;
 	}
 }
 
+@media (min-width: 768px) and (max-width: 1023px) {
+	.python-icon {
+		width: 144px;
+	}
+}
 a,
 a:hover,
 a:focus,
@@ -87,7 +92,7 @@ a:active {
 }
 
 @layer base {
-  :root {
+	:root {
 		--radius: 0.5rem;
 	}
 }

@@ -21,23 +21,25 @@ const ProjectPage = ({ title, dispatch }: ProjectPageProps) => {
 	return projects
 		.filter((p) => p.title === title)
 		.map((project) => (
-			<div className='flex flex-col p-10'>
+			<div className='flex flex-col md:p-10 p-4 mr-8'>
 				<div className='flex w-full content-center justify-center items-center'>
 					<BackButton dispatch={dispatch} />
 					<div className='flex flex-col justify-center items-center text-center w-full mb-8'>
 						<h1 className='md:text-4xl text-lg inline text-cyan-400 font-light'>
 							{project.title}
 						</h1>
-						<h3 className='md:text-2xl text-3xl'>{project.subtitle}</h3>
+						<h3 className='md:text-2xl text-base'>{project.subtitle}</h3>
 					</div>
 				</div>
 				<div className='flex flex-col justify-center items-center'>
-					<div className='flex flex-col ml-4 justify-center items-center border-2 rounded-3xl p-8 w-10/12'>
-						<div className='flex gap-16'>
-							<div className='flex flex-col mt-4 w-5/12 gap-8'>
-								<p className='mt-4 text-left'>{project.description}</p>
-								<div className='flex gap-3 flex-nowrap text-nowrap'>
-									<p>Deployed At:</p>
+					<div className='flex flex-col ml-4 justify-center items-center border-2 rounded-3xl p-8 w-full md:w-10/12'>
+						<div className='flex w-full gap-2 md:gap-16'>
+							<div className='flex flex-col mt-4 w-full md:w-5/12 gap-8'>
+								<p className='mt-4 text-left text-sm md:text-base'>
+									{project.description}
+								</p>
+								<div className='flex gap-3 text-sm md:flex-nowrap md:text-nowrap'>
+									<p className='text-nowrap'>Deployed At:</p>
 									<a target='_blank' href={project.link}>
 										{project.link}
 									</a>
@@ -46,8 +48,8 @@ const ProjectPage = ({ title, dispatch }: ProjectPageProps) => {
 							<Stack project={project} />
 						</div>
 
-						<div className='flex justify-center gap-16 items-center mt-8 w-full'>
-							<div className='flex flex-col gap-8'>
+						<div className='flex justify-center md:gap-8 lg:gap-12 items-center mt-8 w-full'>
+							<div className='flex flex-col items-center justify-center sm:w-3/12 md:w-3/12'>
 								<Image
 									src={
 										project.images &&
@@ -55,10 +57,10 @@ const ProjectPage = ({ title, dispatch }: ProjectPageProps) => {
 										project.images.mobile[0]
 									}
 									alt={project.title}
-									className='w-52'
+									className='w-52 items-center justify-center'
 								/>
 							</div>
-							<div className='w-7/12'>
+							<div className='w-7/12 hidden lg:flex'>
 								<Carousel>
 									<CarouselContent>
 										{project.images &&
