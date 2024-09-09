@@ -1,3 +1,4 @@
+// @ts-ignore
 import { nanoid } from 'nanoid'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import {
