@@ -34,10 +34,12 @@ const ProjectPage = ({ title, dispatch }: ProjectPageProps) => {
 				<div className='flex flex-col justify-center items-center'>
 					<div className='flex flex-col ml-4 justify-center items-center border-2 rounded-3xl p-8 w-full md:w-10/12'>
 						<div className='flex w-full gap-2 md:gap-16'>
-							<div className='flex flex-col mt-4 w-full md:w-5/12 gap-8'>
-								<p className='mt-4 text-left text-sm md:text-base'>
-									{project.description}
-								</p>
+							<div className='flex flex-col mt-4 w-full md:w-5/12 gap-1.5'>
+								{project.description.map((desc, index) => (
+									<p className='text-left text-sm md:text-base' key={index}>
+										{desc}
+									</p>
+								))}
 								<div className='flex gap-3 text-sm md:flex-nowrap md:text-nowrap'>
 									<p className='text-nowrap'>Deployed At:</p>
 									<a target='_blank' href={project.link}>

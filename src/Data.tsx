@@ -10,7 +10,7 @@ import {
 	SiNodedotjs,
 	SiHeroku,
 	SiFirebase,
-	SiSentry,
+	SiAppwrite,
 } from 'react-icons/si'
 import { TbBrandNextjs } from 'react-icons/tb'
 import { faGithub, faHtml5 } from '@fortawesome/free-brands-svg-icons'
@@ -43,6 +43,13 @@ import netflixsearch from '../public/netflix/search.png'
 import netflixtv from '../public/netflix/tv.png'
 import netflixsignin from '../public/netflix/signin.png'
 import netflixmovie from '../public/netflix/movie.png'
+import admin from '../public/healthcare/admin.png'
+import appointment from '../public/healthcare/appointment.png'
+import home from '../public/healthcare/home.png'
+import success from '../public/healthcare/success.png'
+import register1 from '../public/healthcare/register1.png'
+import register2 from '../public/healthcare/register2.png'
+import mobilehealth from '../public/healthcare/mobilehealth.gif'
 
 export const sections = [
 	{
@@ -168,8 +175,8 @@ export const projects = [
 				Tailwind: (
 					<SiTailwindcss className='h-4 w-4 sm:h-4 sm:w-4 md:h-4 md:w-4 text-sky-500'></SiTailwindcss>
 				),
-				Sentry: (
-					<SiSentry className='h-4 w-4 sm:h-4 sm:w-4 md:h-4 md:w-4 text-neutral-300'></SiSentry>
+				Appwrite: (
+					<SiAppwrite className='h-4 w-4 sm:h-4 sm:w-4 md:h-4 md:w-4 text-[#DB1A5A]'></SiAppwrite>
 				),
 			},
 			{
@@ -187,13 +194,15 @@ export const projects = [
 				Tailwind: (
 					<SiTailwindcss className='h-4 w-4  md:h-6 md:w-6 lg:h-12 lg:w-12 text-sky-500'></SiTailwindcss>
 				),
-				Sentry: (
-					<SiSentry className='h-4 w-4  md:h-6 md:w-6 lg:h-12 lg:w-12 text-neutral-300'></SiSentry>
+				Appwrite: (
+					<SiAppwrite className='h-4 w-4  md:h-6 md:w-6 lg:h-12 lg:w-12 text-[#DB1A5A]'></SiAppwrite>
 				),
 			},
 		],
 		subtitle: 'Financial Management App',
-		description: `Developed with Typescript, NextJs, React,  Shadcn, Plaid, Tailwind. It is able to connect to a real bank and display realtime data about transaction history, balance and can also handle transactions between banks.`,
+		description: [
+			`Developed with Typescript, NextJs, React,  Shadcn, Plaid, Tailwind. It is able to connect to a real bank and display realtime data about transaction history, balance and can also handle transactions between banks.`,
+		],
 		features: [
 			'Fully Responsive UI',
 			'User Authentication',
@@ -247,7 +256,9 @@ export const projects = [
 				),
 			},
 		],
-		description: `Developed with Typescript, NextJs, React, Tailwind. It is a realtime chat app where users can chat with each other. It has google authentication, protection of sensitive routes, preformant database queries with Redis.`,
+		description: [
+			`Developed with Typescript, NextJs, React, Tailwind. It is a realtime chat app where users can chat with each other. It has google authentication, protection of sensitive routes, preformant database queries with Redis.`,
+		],
 		subtitle: 'Realtime Chat App',
 		features: [
 			'Fully Responsive UI',
@@ -258,6 +269,73 @@ export const projects = [
 		images: {
 			mobile: [mobilechat],
 			desktop: [mainchat, recentchat, addedchat, pendingchat],
+		},
+	},
+	{
+		id: nanoid(),
+		title: 'Carepulse',
+		src: admin,
+		link: 'https://healthcare-app-omega.vercel.app/',
+		github: 'https://github.com/8885os/Healthcare-App',
+		stack: [
+			{
+				Typescript: (
+					<SiTypescript className='h-4 w-4 sm:h-4 sm:w-4 md:h-4 md:w-4 text-blue-500'></SiTypescript>
+				),
+				Nextjs: (
+					<TbBrandNextjs className='h-4 w-4 sm:h-4 sm:w-4 md:h-4 md:w-4 text-neutral-300'></TbBrandNextjs>
+				),
+				React: (
+					<FontAwesomeIcon
+						icon={faReact}
+						className='h-4 w-4 sm:h-4 sm:w-4 md:h-4 md:w-4 text-sky-400'></FontAwesomeIcon>
+				),
+				Tailwind: (
+					<SiTailwindcss className='h-4 w-4 sm:h-4 sm:w-4 md:h-4 md:w-4 text-sky-500'></SiTailwindcss>
+				),
+				Appwrite: (
+					<SiAppwrite className='h-4 w-4 sm:h-4 sm:w-4 md:h-4 md:w-4 text-[#DB1A5A]'></SiAppwrite>
+				),
+			},
+			{
+				Typescript: (
+					<SiTypescript className='h-4 w-4  md:h-6 md:w-6 lg:h-12 lg:w-12 text-blue-500'></SiTypescript>
+				),
+				Nextjs: (
+					<TbBrandNextjs className='h-4 w-4  md:h-6 md:w-6 lg:h-12 lg:w-12 text-neutral-300'></TbBrandNextjs>
+				),
+				React: (
+					<FontAwesomeIcon
+						icon={faReact}
+						className='h-4 w-4  md:h-6 md:w-6 lg:h-12 lg:w-12 text-sky-400'></FontAwesomeIcon>
+				),
+				Tailwind: (
+					<SiTailwindcss className='h-4 w-4  md:h-6 md:w-6 lg:h-12 lg:w-12 text-sky-500'></SiTailwindcss>
+				),
+				Appwrite: (
+					<SiAppwrite className='h-4 w-4  md:h-6 md:w-6 lg:h-12 lg:w-12 text-[#DB1A5A]'></SiAppwrite>
+				),
+			},
+		],
+		subtitle: 'Healthcare Management System',
+		description: [
+			`Developed with Typescript, NextJs, React,  Shadcn, Tailwind, Sentry.`,
+			`Carepulse is a Healthcare Management System which is designed to streamline and tackle the tedious checkup process.`,
+			`Complete authentication - Once authorised, users can easily create an appointment request with their preferred doctor.`,
+			`Upon a successful request, users are directed to a confirmation page.`,
+			`Any requests can be viewed by Admins in the admin dashboard to be scheduled or cancelled.`,
+		],
+		features: [
+			'Fully Responsive UI',
+			'User Authentication',
+			'Connect bank accounts with Plaid',
+			'Realtime transaction history & Balance',
+			'Connect multiple banks',
+			'Handle Transactions between users',
+		],
+		images: {
+			mobile: [mobilehealth],
+			desktop: [admin, home, register1, register2, success],
 		},
 	},
 	{
@@ -288,7 +366,9 @@ export const projects = [
 				),
 			},
 		],
-		description: `Developed with React and Firebase Authentication. It is a recreation of Netflix which allows users to search for movies or shows, displays featured movies, select movies or shows to watch and display ratings, description and cast. `,
+		description: [
+			`Developed with React and Firebase Authentication. It is a recreation of Netflix which allows users to search for movies or shows, displays featured movies, select movies or shows to watch and display ratings, description and cast. `,
+		],
 		subtitle: 'Recreation of Netflix',
 		features: [
 			'Fully Responsive UI',
@@ -356,7 +436,9 @@ export const projects = [
 				),
 			},
 		],
-		description: `Developed with MongoDB, Express, React, Nodejs. It is a social media app which allows users to create posts like messages and share photos. `,
+		description: [
+			`Developed with MongoDB, Express, React, Nodejs. It is a social media app which allows users to create posts like messages and share photos. `,
+		],
 		subtitle: 'Social Media App',
 		features: [
 			'Fully Responsive UI',
@@ -396,7 +478,9 @@ export const projects = [
 				),
 			},
 		],
-		description: `Developed with React and Firebase. It is a recreation of facebook where users can create posts and share photos. `,
+		description: [
+			`Developed with React and Firebase. It is a recreation of facebook where users can create posts and share photos.`,
+		],
 		subtitle: 'Recreation of Facebook',
 		features: [
 			'Fully Responsive UI',

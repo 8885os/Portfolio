@@ -3,6 +3,8 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import React, { Dispatch } from 'react'
 import { EachProject } from '../types/types'
 import Image from 'next/image'
+import Link from 'next/link'
+import { faGithub } from '@fortawesome/free-brands-svg-icons'
 
 interface ProjectItemProps {
 	project: EachProject
@@ -13,14 +15,13 @@ interface ProjectItemProps {
 export default function ProjectItem({ project, dispatch }: ProjectItemProps) {
 	return (
 		<div className=' p-2 flex flex-col shadow-lg bg-transparent opacity-95 items-center h-50'>
-			<div className='w-fit h-full overflow-hidden'>
+			<div
+				className='w-fit h-full overflow-hidden'
+				onClick={() => dispatch({ type: 'setSelected', title: project.title })}>
 				<Image
 					src={project.src}
 					alt={project.title}
 					className='cursor-pointer object-cover relative w-96 h-72 block'
-					onClick={() => {
-						dispatch({ type: 'setSelected', title: project.title })
-					}}
 				/>
 			</div>
 
@@ -50,9 +51,13 @@ export default function ProjectItem({ project, dispatch }: ProjectItemProps) {
 					<FontAwesomeIcon icon={faUpRightFromSquare}></FontAwesomeIcon>
 				</button>
 				<button
-					className='rounded-full bg-slate-800 px-4 py-1p text-neutral-100'
+					className='rounded-full bg-slate-800 px-2 py-1p text-neutral-100 flex items-center gap-2'
 					onClick={() => window.open(project.github)}>
 					Source
+					<FontAwesomeIcon
+						icon={faGithub}
+						className='h-4 w-4 md:h-4 md:w-4 text-gray-500 hover:cursor-pointer'
+					/>
 				</button>
 			</div>
 		</div>
