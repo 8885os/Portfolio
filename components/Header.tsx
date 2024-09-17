@@ -22,8 +22,8 @@ const Header = ({ homeRef, projectRef, skillsRef, headerRef }: HeaderProps) => {
 	)
 	const [transparency, setTransparency] = useState(
 		typeof window !== 'undefined'
-			? Number(localStorage.getItem('transparency') || 1)
-			: 1
+			? Number(localStorage.getItem('transparency') || 0)
+			: 0
 	)
 
 	useEffect(() => {
