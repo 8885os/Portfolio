@@ -2,7 +2,6 @@ import { faUpRightFromSquare } from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { EachProject } from '@/types/types'
 import Image from 'next/image'
-import Link from 'next/link'
 import { faGithub } from '@fortawesome/free-brands-svg-icons'
 import { useRouter } from 'next/navigation'
 

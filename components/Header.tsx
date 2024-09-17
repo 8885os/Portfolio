@@ -20,18 +20,7 @@ const Header = ({ homeRef, projectRef, skillsRef, headerRef }: HeaderProps) => {
 			? Number(localStorage.getItem('scrollPosition') || 0)
 			: 0
 	)
-	const [transparency, setTransparency] = useState(
-		typeof window !== 'undefined'
-			? Number(localStorage.getItem('transparency') || 0)
-			: 0
-	)
-
-	useEffect(() => {
-		const storedTransparency = localStorage.getItem('transparency')
-		if (storedTransparency) {
-			setTransparency(parseFloat(storedTransparency))
-		}
-	}, [transparency])
+	const [transparency, setTransparency] = useState(0)
 
 	useEffect(() => {
 		const storedTransparency = localStorage.getItem('transparency')
@@ -39,6 +28,7 @@ const Header = ({ homeRef, projectRef, skillsRef, headerRef }: HeaderProps) => {
 			setTransparency(parseFloat(storedTransparency))
 		}
 	}, [])
+
 	const handleScroll = useCallback(() => {
 		setScrollPosition(window.scrollY)
 		localStorage.setItem('scrollPosition', `${window.scrollY}`)

@@ -59,6 +59,7 @@ export default function ProjectPage({ searchParams }: any) {
 									}
 									alt={project.title}
 									className='w-52 items-center justify-center'
+									unoptimized={true}
 								/>
 							</div>
 							<div className='w-7/12 hidden lg:flex'>
