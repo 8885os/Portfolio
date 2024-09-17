@@ -5,10 +5,9 @@ const {
 } = require('tailwindcss/lib/util/flattenColorPalette')
 export default {
 	content: [
-		'./src/**/*.{html,js}',
-		'./src/app/**/*.{js,ts,jsx,tsx,mdx}',
-		'./src/components/**/*.{js,ts,jsx,tsx,mdx}',
-		'./src/**/*.{ts,tsx}',
+		'./app/**/*.{js,ts,jsx,tsx}',
+		'./components/**/*.{js,ts,jsx,tsx,mdx}',
+		'./constants/**/*.{js,ts,jsx,tsx,mdx}',
 	],
 	theme: {
 		extend: {
@@ -17,7 +16,6 @@ export default {
 				md: 'calc(var(--radius) - 2px)',
 				sm: 'calc(var(--radius) - 4px)',
 			},
-			colors: {},
 		},
 	},
 	plugins: [

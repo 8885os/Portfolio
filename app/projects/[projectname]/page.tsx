@@ -1,7 +1,8 @@
-import React, { Dispatch } from 'react'
-import { projects } from '../Data'
+'use client'
+import React from 'react'
+import { projects } from '@/constants/Data'
 import Image from 'next/image'
-import '../index.css'
+import '@/app/index.css'
 import {
 	Carousel,
 	CarouselContent,
@@ -9,21 +10,19 @@ import {
 	CarouselNext,
 	CarouselPrevious,
 } from '@/components/ui/carousel'
-import BackButton from './BackButton'
-import { AnimatedTooltip } from './ui/animated-tooltip'
-import Stack from './Stack'
-type ProjectPageProps = {
-	title: string
-	dispatch: Dispatch<{ type: string; title: string }>
-}
+import BackButton from '@/components/BackButton'
+import Stack from '@/components/Stack'
+import { useParams, useRouter } from 'next/navigation'
 
-const ProjectPage = ({ title, dispatch }: ProjectPageProps) => {
+export default function ProjectPage({ searchParams }: any) {
+	const { projectname } = useParams()
+
 	return projects
-		.filter((p) => p.title === title)
+		.filter((p) => p.title === projectname)
 		.map((project) => (
 			<div className='flex flex-col md:p-10 p-4 mr-8'>
 				<div className='flex w-full content-center justify-center items-center'>
-					<BackButton dispatch={dispatch} />
+					<BackButton />
 					<div className='flex flex-col justify-center items-center text-center w-full mb-8'>
 						<h1 className='md:text-4xl text-lg inline text-cyan-400 font-light'>
 							{project.title}
@@ -90,5 +89,3 @@ const ProjectPage = ({ title, dispatch }: ProjectPageProps) => {
 			</div>
 		))
 }
-
-export default ProjectPage

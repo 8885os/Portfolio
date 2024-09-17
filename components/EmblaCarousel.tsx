@@ -1,10 +1,10 @@
+'use client'
 import React, { useCallback, useEffect, useRef } from 'react'
 import useEmblaCarousel from 'embla-carousel-react'
 import AutoScroll from 'embla-carousel-auto-scroll'
-import '../styles/embla.css'
+import '@/styles/embla.css'
 import SkillCard from './SkillCard'
-
-import { skills } from '../Data'
+import { skills } from '@/constants/Data'
 
 const TWEEN_FACTOR_BASE = 0.95
 

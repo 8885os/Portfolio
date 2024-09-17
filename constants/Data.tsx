@@ -11,12 +11,13 @@ import {
 	SiHeroku,
 	SiFirebase,
 	SiAppwrite,
+	SiReact,
+	SiJavascript,
+	SiHtml5,
+	SiCss3,
+	SiGithub,
 } from 'react-icons/si'
 import { TbBrandNextjs } from 'react-icons/tb'
-import { faGithub, faHtml5 } from '@fortawesome/free-brands-svg-icons'
-import { faJs } from '@fortawesome/free-brands-svg-icons'
-import { faReact } from '@fortawesome/free-brands-svg-icons'
-import { faCss3 } from '@fortawesome/free-brands-svg-icons'
 import MemoryProject from '../public/memoriesapp/memories.png'
 import NetflixCloneProject from '../public/netflix/netflixclone.png'
 import FacebookCloneProject from '../public/facebookapp/facebookclone.png'
@@ -70,51 +71,32 @@ export const skills = [
 	{
 		id: nanoid(),
 		title: 'HTML',
-		logo: (
-			<FontAwesomeIcon
-				icon={faHtml5}
-				className='h-16 w-16 md:h-36 md:w-36 text-red-500'
-			/>
-		),
+		logo: <SiHtml5 className='h-16 w-16 md:h-36 md:w-36 text-red-500' />,
 	},
 	{
 		id: nanoid(),
 		title: 'CSS',
-		logo: (
-			<FontAwesomeIcon
-				icon={faCss3}
-				className='h-16 w-16 md:h-36 md:w-36 text-blue-500'
-			/>
-		),
+		logo: <SiCss3 className='h-16 w-16 md:h-36 md:w-36 text-blue-500' />,
 	},
 	{
 		id: nanoid(),
 		title: 'Javascript',
 		logo: (
-			<FontAwesomeIcon
-				icon={faJs}
-				className='h-16 w-16 md:h-36 md:w-36 text-yellow-300'
-			/>
+			<SiJavascript className='h-16 w-16 md:h-36 md:w-36 text-yellow-300' />
 		),
 	},
 	{
 		id: nanoid(),
 		title: 'React',
 		logo: (
-			<FontAwesomeIcon
-				icon={faReact}
-				className='h-16 w-16 sm:h-26 sm:w-26 md:h-32 md:w-32 text-sky-400'
-			/>
+			<SiReact className='h-16 w-16 sm:h-26 sm:w-26 md:h-32 md:w-32 text-sky-400' />
 		),
 	},
 	{
 		id: nanoid(),
 		title: 'Github',
 		logo: (
-			<FontAwesomeIcon
-				icon={faGithub}
-				className='h-16 w-16 md:h-36 sm:h-26 sm:w-26 md:w-36 text-neutral-300'
-			/>
+			<SiGithub className='h-16 w-16 md:h-36 sm:h-26 sm:w-26 md:w-36 text-neutral-300' />
 		),
 	},
 	{
@@ -155,7 +137,7 @@ export const skills = [
 export const projects = [
 	{
 		id: nanoid(),
-		title: 'Horizon Banking',
+		title: 'HorizonBanking',
 		src: Horizon,
 		link: 'https://horizon-banking-two.vercel.app/sign-in',
 		github: 'https://github.com/8885os/Horizon-Banking',
@@ -168,9 +150,7 @@ export const projects = [
 					<TbBrandNextjs className='h-4 w-4 sm:h-4 sm:w-4 md:h-4 md:w-4 text-neutral-300'></TbBrandNextjs>
 				),
 				React: (
-					<FontAwesomeIcon
-						icon={faReact}
-						className='h-4 w-4 sm:h-4 sm:w-4 md:h-4 md:w-4 text-sky-400'></FontAwesomeIcon>
+					<SiReact className='h-4 w-4 sm:h-4 sm:w-4 md:h-4 md:w-4 text-sky-400'></SiReact>
 				),
 				Tailwind: (
 					<SiTailwindcss className='h-4 w-4 sm:h-4 sm:w-4 md:h-4 md:w-4 text-sky-500'></SiTailwindcss>
@@ -187,9 +167,7 @@ export const projects = [
 					<TbBrandNextjs className='h-4 w-4  md:h-6 md:w-6 lg:h-12 lg:w-12 text-neutral-300'></TbBrandNextjs>
 				),
 				React: (
-					<FontAwesomeIcon
-						icon={faReact}
-						className='h-4 w-4  md:h-6 md:w-6 lg:h-12 lg:w-12 text-sky-400'></FontAwesomeIcon>
+					<SiReact className='h-4 w-4  md:h-6 md:w-6 lg:h-12 lg:w-12 text-sky-400'></SiReact>
 				),
 				Tailwind: (
 					<SiTailwindcss className='h-4 w-4  md:h-6 md:w-6 lg:h-12 lg:w-12 text-sky-500'></SiTailwindcss>
@@ -218,7 +196,7 @@ export const projects = [
 	},
 	{
 		id: nanoid(),
-		title: 'Chat App',
+		title: 'ChatApp',
 		src: ChatAppProject,
 		link: 'https://realtime-chatapp-lemon.vercel.app/',
 		github: 'https://github.com/8885os/Realtime-Chatapp',
@@ -231,9 +209,7 @@ export const projects = [
 					<TbBrandNextjs className='h-4 w-4 sm:h-4 sm:w-4 md:h-4 md:w-4 text-neutral-300'></TbBrandNextjs>
 				),
 				React: (
-					<FontAwesomeIcon
-						icon={faReact}
-						className='h-4 w-4 sm:h-4 sm:w-4 md:h-4 md:w-4 text-sky-400'></FontAwesomeIcon>
+					<SiReact className='h-4 w-4 sm:h-4 sm:w-4 md:h-4 md:w-4 text-sky-400'></SiReact>
 				),
 				Tailwind: (
 					<SiTailwindcss className='h-4 w-4 sm:h-4 sm:w-4 md:h-4 md:w-4 text-sky-500'></SiTailwindcss>
@@ -247,9 +223,7 @@ export const projects = [
 					<TbBrandNextjs className='h-4 w-4  md:h-6 md:w-6 lg:h-12 lg:w-12 text-neutral-300'></TbBrandNextjs>
 				),
 				React: (
-					<FontAwesomeIcon
-						icon={faReact}
-						className='h-4 w-4  md:h-6 md:w-6 lg:h-12 lg:w-12 text-sky-400'></FontAwesomeIcon>
+					<SiReact className='h-4 w-4  md:h-6 md:w-6 lg:h-12 lg:w-12 text-sky-400'></SiReact>
 				),
 				Tailwind: (
 					<SiTailwindcss className='h-4 w-4  md:h-6 md:w-6 lg:h-12 lg:w-12 text-sky-500'></SiTailwindcss>
@@ -286,9 +260,7 @@ export const projects = [
 					<TbBrandNextjs className='h-4 w-4 sm:h-4 sm:w-4 md:h-4 md:w-4 text-neutral-300'></TbBrandNextjs>
 				),
 				React: (
-					<FontAwesomeIcon
-						icon={faReact}
-						className='h-4 w-4 sm:h-4 sm:w-4 md:h-4 md:w-4 text-sky-400'></FontAwesomeIcon>
+					<SiReact className='h-4 w-4 sm:h-4 sm:w-4 md:h-4 md:w-4 text-sky-400'></SiReact>
 				),
 				Tailwind: (
 					<SiTailwindcss className='h-4 w-4 sm:h-4 sm:w-4 md:h-4 md:w-4 text-sky-500'></SiTailwindcss>
@@ -305,9 +277,7 @@ export const projects = [
 					<TbBrandNextjs className='h-4 w-4  md:h-6 md:w-6 lg:h-12 lg:w-12 text-neutral-300'></TbBrandNextjs>
 				),
 				React: (
-					<FontAwesomeIcon
-						icon={faReact}
-						className='h-4 w-4  md:h-6 md:w-6 lg:h-12 lg:w-12 text-sky-400'></FontAwesomeIcon>
+					<SiReact className='h-4 w-4  md:h-6 md:w-6 lg:h-12 lg:w-12 text-sky-400'></SiReact>
 				),
 				Tailwind: (
 					<SiTailwindcss className='h-4 w-4  md:h-6 md:w-6 lg:h-12 lg:w-12 text-sky-500'></SiTailwindcss>
@@ -335,21 +305,19 @@ export const projects = [
 		],
 		images: {
 			mobile: [mobilehealth],
-			desktop: [admin, home, register1, register2, success],
+			desktop: [admin, home, register1, register2, appointment, success],
 		},
 	},
 	{
 		id: nanoid(),
-		title: 'Netflix Clone',
+		title: 'NetflixClone',
 		src: NetflixCloneProject,
 		link: 'https://netflix-clone-61df7.firebaseapp.com/',
 		github: 'https://github.com/8885os/NetflixClone',
 		stack: [
 			{
 				React: (
-					<FontAwesomeIcon
-						icon={faReact}
-						className='h-4 w-4 sm:h-4 sm:w-4 md:h-4 md:w-4 text-sky-400'></FontAwesomeIcon>
+					<SiReact className='h-4 w-4 sm:h-4 sm:w-4 md:h-4 md:w-4 text-sky-400'></SiReact>
 				),
 				Firebase: (
 					<SiFirebase className='h-4 w-4 sm:h-4 sm:w-4 md:h-4 md:w-4 text-yellow-500'></SiFirebase>
@@ -357,9 +325,7 @@ export const projects = [
 			},
 			{
 				React: (
-					<FontAwesomeIcon
-						icon={faReact}
-						className='h-4 w-4 md:h-6 md:w-6 lg:h-12 lg:w-12 text-sky-400'></FontAwesomeIcon>
+					<SiReact className='h-4 w-4  md:h-6 md:w-6 lg:h-12 lg:w-12 text-sky-400'></SiReact>
 				),
 				Firebase: (
 					<SiFirebase className='h-4 w-4 md:h-6 md:w-6 lg:h-12 lg:w-12 text-yellow-500'></SiFirebase>
@@ -392,7 +358,7 @@ export const projects = [
 	},
 	{
 		id: nanoid(),
-		title: 'Memory Project',
+		title: 'MemoryProject',
 		src: MemoryProject,
 		link: '',
 		github: 'https://github.com/8885os/Memories-App-MERN',
@@ -405,9 +371,7 @@ export const projects = [
 					<SiExpress className='text-black h-4 w-4 sm:h-4 sm:w-4 md:h-4 md:w-4 p-1p bg-white'></SiExpress>
 				),
 				React: (
-					<FontAwesomeIcon
-						icon={faReact}
-						className='h-4 w-4 sm:h-4 sm:w-4 md:h-4 md:w-4 text-sky-400'></FontAwesomeIcon>
+					<SiReact className='h-4 w-4 sm:h-4 sm:w-4 md:h-4 md:w-4 text-sky-400'></SiReact>
 				),
 				Nodejs: (
 					<SiNodedotjs className='h-4 w-4 sm:h-4 sm:w-4 md:h-4 md:w-4 text-green-500'></SiNodedotjs>
@@ -424,9 +388,7 @@ export const projects = [
 					<SiExpress className='text-black h-4 w-4  md:h-6 md:w-6 lg:h-12 lg:w-12 p-1p bg-white'></SiExpress>
 				),
 				React: (
-					<FontAwesomeIcon
-						icon={faReact}
-						className='h-4 w-4  md:h-6 md:w-6 lg:h-12 lg:w-12 text-sky-400'></FontAwesomeIcon>
+					<SiReact className='h-4 w-4  md:h-6 md:w-6 lg:h-12 lg:w-12 text-sky-400'></SiReact>
 				),
 				Nodejs: (
 					<SiNodedotjs className='h-4 w-4  md:h-6 md:w-6 lg:h-12 lg:w-12 text-green-500'></SiNodedotjs>
@@ -452,16 +414,14 @@ export const projects = [
 	},
 	{
 		id: nanoid(),
-		title: 'Facebook Clone',
+		title: 'FacebookClone',
 		src: FacebookCloneProject,
 		link: '',
 		github: 'https://github.com/8885os/fb-clone',
 		stack: [
 			{
 				React: (
-					<FontAwesomeIcon
-						icon={faReact}
-						className='h-4 w-4 sm:h-4 sm:w-4 md:h-4 md:w-4 text-sky-400'></FontAwesomeIcon>
+					<SiReact className='h-4 w-4 sm:h-4 sm:w-4 md:h-4 md:w-4 text-sky-400'></SiReact>
 				),
 				Firebase: (
 					<SiFirebase className='h-4 w-4 sm:h-4 sm:w-4 md:h-4 md:w-4 text-yellow-500'></SiFirebase>
@@ -469,9 +429,7 @@ export const projects = [
 			},
 			{
 				React: (
-					<FontAwesomeIcon
-						icon={faReact}
-						className='h-4 w-4 md:h-6 md:w-6 lg:h-12 lg:w-12 text-sky-400'></FontAwesomeIcon>
+					<SiReact className='h-4 w-4  md:h-6 md:w-6 lg:h-12 lg:w-12 text-sky-400'></SiReact>
 				),
 				Firebase: (
 					<SiFirebase className='h-4 w-4 md:h-6 md:w-6 lg:h-12 lg:w-12 text-yellow-500'></SiFirebase>

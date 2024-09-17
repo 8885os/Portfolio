@@ -1,23 +1,25 @@
 import { faUpRightFromSquare } from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import React, { Dispatch } from 'react'
-import { EachProject } from '../types/types'
+import { EachProject } from '@/types/types'
 import Image from 'next/image'
 import Link from 'next/link'
 import { faGithub } from '@fortawesome/free-brands-svg-icons'
+import { useRouter } from 'next/navigation'
 
 interface ProjectItemProps {
 	project: EachProject
-	dispatch: Dispatch<{ type: string; title: string }>
 	key: string
 }
 
-export default function ProjectItem({ project, dispatch }: ProjectItemProps) {
+export default function ProjectItem({ project }: ProjectItemProps) {
+	const router = useRouter()
 	return (
 		<div className=' p-2 flex flex-col shadow-lg bg-transparent opacity-95 items-center h-50'>
 			<div
 				className='w-fit h-full overflow-hidden'
-				onClick={() => dispatch({ type: 'setSelected', title: project.title })}>
+				onClick={() =>
+					router.push('/projects/' + project.title, { scroll: false })
+				}>
 				<Image
 					src={project.src}
 					alt={project.title}
@@ -29,7 +31,7 @@ export default function ProjectItem({ project, dispatch }: ProjectItemProps) {
 				<span className='flex flex-row gap-12 items-center max-h-6 text-nowrap mt-4'>
 					{project.title}
 					{Object.keys(project.stack).length > 0 && (
-						<span className='flex flex-row gap-1 items-center rounded-full bg-slate-800 pl-3 pr-3 py-1p'>
+						<span className='flex flex-row gap-1 items-center rounded-full bg-slate-800 pl-3 pr-3 py-1'>
 							{Object.keys(project.stack[0]).map((stack, index) => (
 								<span key={index}>
 									{project.stack[0][stack as keyof (typeof project.stack)[0]]}

@@ -1,11 +1,11 @@
 import React from 'react'
-import '../styles/AboutMe.css'
+import '@/styles/AboutMe.css'
 import { motion } from 'framer-motion'
 import { TypeAnimation } from 'react-type-animation'
-import pythonimg from '../../public/python.png'
+import pythonimg from '@/public/python.png'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faJs } from '@fortawesome/free-brands-svg-icons'
-import { SiTypescript } from 'react-icons/si'
+import { SiJavascript, SiTypescript } from 'react-icons/si'
 import Image from 'next/image'
 import { HeroHighlight } from './ui/hero-highlight'
 import { HoverBorderGradient } from './ui/hover-border-gradient'
@@ -97,17 +97,13 @@ const AboutMe = ({ homeRef }: AboutMeProps) => {
 								alt='python'
 								className='h-16 w-16 sm:h-26 sm:w-26 md:h-28 md:w-28'
 							/>
-							<FontAwesomeIcon
-								icon={faJs}
-								className='h-16 w-16 sm:h-26 sm:w-26 md:h-28 md:w-28 text-yellow-300'
-							/>
+							<SiJavascript className='h-16 w-16 sm:h-26 sm:w-26 md:h-24 md:w-24 text-yellow-400' />
 							<SiTypescript className='h-16 w-16 sm:h-26 sm:w-26 md:h-24 md:w-24 text-blue-500' />
 						</div>
 					</div>
 				</div>
-				<HoverBorderGradient className='bg-neutral-800 bg-opacity-50'>
+				<HoverBorderGradient>
 					<motion.button
-						variants={button}
 						whileHover={{ scale: 1 }}
 						animate={{ scale: 0.9 }}
 						transition={{
@@ -129,7 +125,6 @@ const AboutMe = ({ homeRef }: AboutMeProps) => {
 						<span className='text-neutral-100 tracking-wide font-light h-full w-full block relative active:no-underline active:text-neutral-100 text-button'>
 							Open Cv
 						</span>
-						<span className='block absolute inset-0 rounded-md p-px linear-overlay' />
 					</motion.button>
 				</HoverBorderGradient>
 			</div>

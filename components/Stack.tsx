@@ -1,6 +1,6 @@
 import React from 'react'
 import { AnimatedTooltip } from './ui/animated-tooltip'
-import { EachProject } from '@/types/types'
+import { EachProject } from '../types/types'
 
 type StackProps = {
 	project: EachProject
