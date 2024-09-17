@@ -1,4 +1,6 @@
 import type { Metadata } from 'next'
+import { Analytics } from '@vercel/analytics/react'
+import { SpeedInsights } from '@vercel/speed-insights/next'
 
 export const metadata: Metadata = {
 	title: 'Daniel Davies',
@@ -13,7 +15,11 @@ export default function RootLayout({
 	return (
 		<html lang='en' className='scroll-smooth'>
 			<body>
-				<div id='root'>{children}</div>
+				<div id='root'>
+					{children}
+					<Analytics />
+					<SpeedInsights />
+				</div>
 			</body>
 		</html>
 	)
